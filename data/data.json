@@ -5,7 +5,8 @@
         "information":"The Cleric Beast is an enormous creature with disfigured horns. With high agility and superhuman strength, this boss should not be taken lightly.",
         "location":"Central Yharnam",
         "Drops":["Blood Echoes","Sword Hunter Badge"],
-        "image":"https://bloodborne.wiki.fextralife.com/file/Bloodborne/Cleric_Beast_Blood_Moon.jpg?v=1482926325605"
+        "image":"https://bloodborne.wiki.fextralife.com/file/Bloodborne/Cleric_Beast_Blood_Moon.jpg?v=1482926325605",
+        "fight":"Neccesary"
     },
     {
         "id":"2",
@@ -13,7 +14,17 @@
         "information":"",
         "location":"Central Yharnam",
         "Drops":["Blood Echoes", "Oedon Tomb Key"],
-        "image":"https://bloodborne.wiki.fextralife.com/file/Bloodborne/Gascoigne_Strafing_R.jpg?v=1501610170242"
+        "image":"https://bloodborne.wiki.fextralife.com/file/Bloodborne/Gascoigne_Strafing_R.jpg?v=1501610170242",
+        "fight":"Neccesary"
+    },
+    {
+        "id":"3",
+        "name":"Blood-starved Beast",
+        "information":"",
+        "location":"Old Yharnam",
+        "Drops":["Blood Echoes", "Pthumeru Chalice"],
+        "image":"https://static.wikia.nocookie.net/vsbattles/images/7/75/Bloodborne-bestiary-blood-starved-beast-two-column-01-ps4-us-20mar15.0.png/revision/latest?cb=20160412043325",
+        "fight":"Optional"
     },
     {
         "id":"",
@@ -21,7 +32,8 @@
         "information":"",
         "location":"",
         "Drops":["", "", ""],
-        "image":""
+        "image":"",
+        "fight":""
     }
 
 ]
