@@ -13,31 +13,29 @@ export class BossesModel{
         return findIndex
 
     }
-    static async getBylocationAndDrops({location,drops}){
-				if(location){
-						const locationFound = bosses.filter((data)=> {
-								const locationUpper = data.location.toLocaleLowerCase() == location.toLocaleLowerCase()
-		
-								return locationUpper
-		
-						})
-						return locationFound
-				}
-				
-				if(drops){
-					const dropFound = bosses.filter((data) => {
-						// const dropUpper = data.drops.toLocaleLowerCase() == drops.toLocaleLowerCase()
+	static async getBylocationAndDrops({location,drops}){
+		if(location){
+			const locationFound = bosses.filter((data)=> {
+					const locationUpper = data.location.toLocaleLowerCase() == location.toLocaleLowerCase()
 
-						console.log(data.Drops[1]);
+					return locationUpper
 
-						// console.log(drops.toLocaleLowerCase());
-						
-						// return dropUpper
-					})
-					return dropFound
-				}
+			})
+			return locationFound
+		}
 
+		if(drops){
+			const findDrop = bosses.filter((data)=> {
+				const dropsData = data.drops
+				const lowerCase = dropsData.map(e => {
+					return e.toLowerCase()
+				})
+				const filterDrops = lowerCase.includes(drops.toLocaleLowerCase())
 
+				return filterDrops
+			})
+			return findDrop
+		}
 
 
         return location || drops

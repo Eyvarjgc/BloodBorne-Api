@@ -32,7 +32,7 @@ app.get('/ds', async(req,res) => {
     const { location, drops } = req.query
     const result = await BossesModel.getBylocationAndDrops({ location, drops})
     if(result == false){
-        res.status(404).send({
+        return res.status(404).send({
             success:false,
             message:`Error Item Not Found`
         })
