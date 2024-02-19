@@ -42,4 +42,28 @@ export class BossesModel{
 	static async postData(body){
 		return body
 	}
+
+	static async patchData(id,body){
+    const findIndex = bosses.findIndex(data => data.id == id )
+		if(findIndex == -1) return false
+
+		const updateData = {
+			...bosses[findIndex],
+			...body
+		}
+		bosses[findIndex] = updateData
+
+		return updateData
+	}
+
+	static async delete(id){
+		const findIndex = bosses.findIndex(data => data.id == Number(id))
+		if(findIndex == -1)return false
+
+		const updatedData = bosses.filter(data => data.id != Number(findIndex) + 1)
+
+		return updatedData
+	}
+
+	
 }

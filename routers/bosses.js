@@ -12,6 +12,12 @@ bossesRouter.get('/:id', BossesController.getById)
 
 bossesRouter.post('', BossesController.postData)
 
+bossesRouter.patch('/:id', BossesController.patchData)
+
+bossesRouter.delete('/:id', BossesController.deleteData)
+
+
+
 
 export default bossesRouter
 

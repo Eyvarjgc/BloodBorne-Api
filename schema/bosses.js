@@ -14,3 +14,7 @@ const postSchema = z.object({
 export function postValidation(object){
   return postSchema.safeParse(object)
 }
+
+export function patchPartialValidation(object){
+  return postSchema.partial().safeParse(object)
+}
