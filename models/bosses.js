@@ -39,5 +39,7 @@ export class BossesModel{
 
 	}
 
-
+	static async postData(body){
+		return body
+	}
 }
