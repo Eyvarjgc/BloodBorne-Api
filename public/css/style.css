@@ -4,14 +4,14 @@
 }
 
 body{
-  background-image: url(../Bloodborne\ background.jpg);
+  background-image: url(../assets/Bloodborne\ background.jpg);
   background-repeat: no-repeat ;
   background-position: center;
   background-size: cover;
 }
 @font-face {
   font-family: Bloodborne;
-  src: url(flesh-and-blood-font/Fleshandblood-MVA5x.ttf);
+  src: url(../assets/flesh-and-blood-font/Fleshandblood-MVA5x.ttf);
 
 }
 .mainHero{

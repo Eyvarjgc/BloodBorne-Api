@@ -27,6 +27,15 @@
         "fight":"Optional"
     },
     {
+        "id":"4",
+        "name":"Vicar Amelia",
+        "information":"",
+        "location":"Cathedral Ward",
+        "drops":["Blood Echoes", "Gold Pendant"],
+        "image":"https://bloodborne.wiki.fextralife.com/file/Bloodborne/Amelia_Header.jpg",
+        "fight":"Neccesary"
+    },
+    {
         "id":"",
         "name":"",
         "information":"",
