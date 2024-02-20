@@ -3,7 +3,7 @@
   padding: 0;
 }
 body{
-  background-image: url(../BossesBackground.jpg);
+  background-image: url(../assets/BossesBackground.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -11,7 +11,7 @@ body{
 }
 @font-face {
   font-family: Bloodborne;
-  src: url(flesh-and-blood-font/Fleshandblood-MVA5x.ttf);
+  src: url(../assets/flesh-and-blood-font/Fleshandblood-MVA5x.ttf);
 
 }
 .mainTitle{
