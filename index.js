@@ -1,13 +1,15 @@
 import express  from "express";
 const app = express()
 
-// import { BossesModel } from "./models/bosses.js";
+import cors from "cors";
+app.use(cors())
 
 const PORT = process.env.PORT ?? 3000
 
 import  bossesRouter   from './routers/bosses.js'
 app.use('/bosses', bossesRouter)
 
+app.use(express.static('public'))
 
 
 
