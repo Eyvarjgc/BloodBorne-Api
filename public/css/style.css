@@ -1,0 +1,70 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  background-image: url(../Bloodborne\ background.jpg);
+  background-repeat: no-repeat ;
+  background-position: center;
+  background-size: cover;
+}
+@font-face {
+  font-family: Bloodborne;
+  src: url(flesh-and-blood-font/Fleshandblood-MVA5x.ttf);
+
+}
+.mainHero{
+  width: 100%;
+  max-width: 1200px;
+  height: 5vh;
+  margin: 0 auto;
+
+  ul{
+    width: 70%;
+    margin: 2em auto;
+    display: flex;
+    gap: 1em;
+    justify-content: space-around;
+    font-size: 30px;
+    font-family: bloodborne;
+
+    li{
+      list-style: none;
+
+      a{
+        text-decoration: none;
+        color: White;
+      }
+      a:hover{
+        background: linear-gradient(to right, #0ca9b4, #8898cd);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+}
+
+.titleSection{
+  height: 50vh;
+
+
+  .mainTitle{
+    background: linear-gradient(to right, #ebebeb, #000f41);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 80px;
+    text-align: center;
+    font-family: bloodborne;
+    margin: 20rem auto;
+  }
+}
+
+
+
+.container{
+  width: 90%;
+  max-width: 1200px;
+  border: 2px solid red;
+  margin: 0 auto;
+}
