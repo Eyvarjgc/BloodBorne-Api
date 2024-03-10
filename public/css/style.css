@@ -15,6 +15,7 @@ body{
 
 }
 .mainHero{
+  
   width: 100%;
   height: 3em;
   max-width: 1200px;
@@ -136,6 +137,7 @@ body{
 @media (min-width:800px){
   .mainHero{
     width: 100%;
+    min-width: 1200px;
     height: 5em;
     margin: 0 auto;
     background-color: black;

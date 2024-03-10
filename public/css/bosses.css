@@ -3,7 +3,7 @@
   padding: 0;
 }
 body{
-  background-image: url(../assets/BossesBackground.jpg);
+  background-color: black;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -14,15 +14,107 @@ body{
   src: url(../assets/flesh-and-blood-font/Fleshandblood-MVA5x.ttf);
 
 }
-.mainTitle{
-  background: linear-gradient(to right, #e90707, #d59200);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 80px;
-  text-align: center;
-  font-family: bloodborne;
-  margin: 5rem auto;
+
+.mainHero{
+  width: 100%;
+  min-width: 1200px;
+  height: 5em;
+  margin: 0 auto;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid white;
+  .mainHero__img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    margin-left: 2em;
+  }
+  ul{
+    /* margin: 0 10em; */
+    display: flex;
+    gap: 1.5em;
+    font-size: 25px;
+    font-family: bloodborne;
+    margin-right: 2em;
+    li{
+      list-style: none;
+
+      a{
+        text-decoration: none;
+        color: White;
+      }
+      a:hover{
+        background: linear-gradient(to right, #0ca9b4, #8898cd);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
 }
+.docCont{
+display: flex;
+flex-direction: row;
+}
+.ind{
+  width: 15%;
+  height: 100vh;
+  padding: 1.5em;
+  color: white;
+  border-right: 1px solid grey;
+  a{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    padding-top: 2px;
+    padding-left: 10px;
+  }
+}
+.content{
+  color: white;
+  width: 100%;
+  height: 50vh;
+  padding: 5em;
+  h2{
+    font-family: 'bloodborne';
+    font-size: 30px;
+  }
+  p{
+    padding-top: 10px;
+    font-size: 20px;
+    span{
+      border-bottom: 1px solid white;
+    }
+  }
+
+
+  .bossesTitle{
+    /* background: linear-gradient(to right, #e90707, #d59200);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    padding-top: 5em;
+    color: white;
+    font-size: 30px;
+    font-family: bloodborne;
+  }
+
+  .getAllBosses{
+    padding-top: 5em;
+    font-family: 'Bloodborne';
+    font-size: 25px;
+
+    .getAllBossesP{
+      color: red;
+      background-color: red;
+    }
+  }
+}
+
+
+
+
 .endpoint{
   font-family: bloodborne;
   font-size: 30px;
@@ -61,4 +153,11 @@ h4{
 }
 img{
   width: 75%;
+}
+
+
+
+
+@media (min-width:950px){
+ 
 }

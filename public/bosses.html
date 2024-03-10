@@ -3,21 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Documentation</title>
   <link rel="stylesheet" href="./css/bosses.css">
 </head>
 <body>
-  <h1 class="mainTitle">Bloodborne Bosses</h1>
-  <h3 class="endpoint">EndPoint: </h3>
-  <h4>https://bloodborne-simple-api-dev-sdqb.2.us-1.fl0.io/bosses</h4>
-  <section class="bossesSection">
+  <nav class="mainHero">
+  <img class="mainHero__img" src="assets/mark.jpg" alt="IMAGE GO HERE">
+  <ul>
+    <li> <a href="bosses.html">Docs</a> </li>
+    <li><a href="">About</a> </li>
+    <li><a href="">Support us</a> </li>
+  </ul>
+</nav>
+  
+<div class="docCont">
+  <div class="ind">
+    <h2>Introduction</h2>
+    <p><a href="#rest" >REST</a> </p>
+
+    <h2>Bosses</h2>
+    <p><a href="">Bosses schema</a> </p>
+    <p> <a href="#getAllBosses">Get all bosses</a> </p>
 
 
-  </section>
+  </div>
+  <div class="content" id="rest">
+    <h2>REST</h2>
+    <p>Base url: <span>https://bloodborne-simple-api-dev-sdqb.2.us-1.fl0.io</span></p>
 
+    <h1 class="bossesTitle">Bloodborne Bosses</h1>
+      <p>There is a total of 4 bosses</p>
+
+    <h2 class="getAllBosses" id="getAllBosses">Get all bosses</h2>
+      <p class="getAllBossesP">GET: <span class="getAllBossesSpan">https://bloodborne-simple-api-dev-sdqb.2.us-1.fl0.io/bosses</span></p>
+
+  </div>
+</div>
 
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
   <script src="./js/bossses.js"></script>
 
 </body>
