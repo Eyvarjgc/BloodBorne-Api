@@ -19,6 +19,7 @@ export class BossesModel{
 				const lowerCase = dropsData.map(e => {
 					return e.toLowerCase()
 				})
+				
 				const filterDrops = lowerCase.includes(drops.toLocaleLowerCase())
 
 				return filterDrops

@@ -16,19 +16,27 @@ body{
 }
 .mainHero{
   width: 100%;
-  max-width: 1200px;
-  height: 5vh;
+  height: 5em;
   margin: 0 auto;
-
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  
+  .mainHero__img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    margin-left: 2em;
+  }
   ul{
-    width: 70%;
-    margin: 2em auto;
+    /* margin: 0 10em; */
     display: flex;
-    gap: 1em;
-    justify-content: space-around;
-    font-size: 30px;
+    gap: 1.5em;
+    font-size: 25px;
     font-family: bloodborne;
-
+    margin-right: 2em;
     li{
       list-style: none;
 
@@ -49,22 +57,82 @@ body{
   height: 50vh;
 
 
-  .mainTitle{
-    background: linear-gradient(to right, #ebebeb, #000f41);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 80px;
-    text-align: center;
-    font-family: bloodborne;
-    margin: 20rem auto;
-  }
+}
+.mainTitle{
+  /* background: linear-gradient(to right, #171717, #ce0000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  color: white;
+  text-shadow: 2px 4px 6px black;
+  font-size: 100px;
+  text-align: center;
+  font-family: bloodborne;
+  padding-top: 1em;
 }
 
 
-
-.container{
-  width: 90%;
-  max-width: 1200px;
-  border: 2px solid red;
+.apiSection{
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0.37);
+  width: 70%;
   margin: 0 auto;
+  border: 1px double  #0ca9b4;
+  border-radius: 10px;
+  padding: 3em;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-rows: auto;
+  grid-auto-flow: dense;
+
+  
+  .card{
+    /* background-image: url('../assets/Cleric_beast.webp'); */
+    background-size: 225px 100% ;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 200px;
+    height: 300px;
+    border-radius: 15px;
+    border: 0.5px solid white;
+    align-items: end;
+    display: flex;
+
+    .content{
+      min-height: 150px;
+      min-width: 97%;
+      align-items: end;
+      background-color: rgba(38, 38, 38, 0.961);
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+      font-family: 'bloodborne';
+      text-align: start;
+      padding: 5px 0 0 5px;
+
+      .name{
+        font-size: 25px;
+        color: white;
+        text-align: start;
+      }
+      .locationTag{
+        color: #000000;
+        font-size: 15px;
+      }
+      .location{
+        font-size: 10px;
+        padding-left: 10px;
+      }
+      .fightTag{
+        color: #000000;
+        font-size: 15px;
+      }
+      .fight{
+        font-size: 15px;
+        padding-left: 10px;
+      }
+    }
+  }
 }
