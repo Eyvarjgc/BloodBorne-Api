@@ -5,10 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Documentation</title>
   <link rel="stylesheet" href="./css/bosses.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
   <nav class="mainHero">
-  <img class="mainHero__img" src="assets/mark.jpg" alt="IMAGE GO HERE">
+  <a href="index.html"><img class="mainHero__img" src="assets/mark.jpg" alt="IMAGE GO HERE"></a>
   <ul>
     <li> <a href="bosses.html">Docs</a> </li>
     <li><a href="">About</a> </li>
@@ -17,25 +20,140 @@
 </nav>
   
 <div class="docCont">
+
   <div class="ind">
-    <h2>Introduction</h2>
-    <p><a href="#rest" >REST</a> </p>
+    <h2><a href="#intro" class="title">Introduction</a></h2>
+      <p><a href="#rest" class="subtitle">REST</a></p>
 
-    <h2>Bosses</h2>
-    <p><a href="">Bosses schema</a> </p>
-    <p> <a href="#getAllBosses">Get all bosses</a> </p>
-
+    <h2><a href="#bosses" class="title">Bosses</a></h2>
+      <p><a href="#bosses__schema"class="subtitle">Bosses schema</a></p>
+      <p><a href="#getAllBosses" class="subtitle">Get all bosses</a></p>
+      <p><a href="#singleBoss" class="subtitle">Get a single boss</a></p>
 
   </div>
-  <div class="content" id="rest">
-    <h2>REST</h2>
-    <p>Base url: <span>https://bloodborne-simple-api-dev-sdqb.2.us-1.fl0.io</span></p>
 
-    <h1 class="bossesTitle">Bloodborne Bosses</h1>
-      <p>There is a total of 4 bosses</p>
+  <div class="content" >
+    <h1 class="doc__title" >Documentation</h1>
 
-    <h2 class="getAllBosses" id="getAllBosses">Get all bosses</h2>
-      <p class="getAllBossesP">GET: <span class="getAllBossesSpan">https://bloodborne-simple-api-dev-sdqb.2.us-1.fl0.io/bosses</span></p>
+<!-- Introduction -->
+    <section class="intr__sect">
+    <h2 class="intr__title " id="intro">Introduction</h2>
+    <p>Welcome to the official documentation for <span class="blooborne__api__span">Bloodborne's API!</span>  Whether you're a developer, gamer, or enthusiast, this documentation provides comprehensive information on accessing and utilizing <span class="blooborne__api__span">Bloodborne's API</span>  to enhance your experience.
+
+    </p>
+    <p class="intr__title__mo">All interactions with the API are performed via <span class="special__element">GET </span> requests, ensuring simplicity and ease of use. </p>
+    </section>
+
+<!-- Rest section -->
+    <section class="rest__sect" id="rest">
+      <h2>REST</h2>
+      <p>Base url: <a href="https://bloodborne-simple-api-dev-sdqb.2.us-1.fl0.io/api" class="endPoint">https://bloodborne-simple-api-dev-sdqb.2.us-1.fl0.io/api</a></p>
+      <p class="rest__des">The base URL for <span class="blooborne__api__span">Bloodborne's API</span>  serves as the entry point for accessing all available resources.Expect all responses from the API to be formatted in <span class="special__element">JSON</span> , allowing for easy integration into your applications. </p>
+
+
+
+      <div class="script-container">
+        <pre>
+          <code class="shell-script">
+          get
+          </code>
+        </pre>
+      </div>
+
+    </section>
+    
+<!-- Bosses sectio -->
+    <section id="bosses">
+      <h2 class="bossesTitle">Bloodborne Bosses</h2>
+      <p>There are  <span class="special__element">4</span> bosses in total, ordered by ID.</p>
+    </section>
+
+<!-- Bosses schema section  -->
+    <section id="bosses__schema">
+      <h2>Bosses schema</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Key</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+
+
+
+        </tbody>
+        <tr>
+          <td>id</td>
+          <td>int</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>name</td>
+          <td>string</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>information</td>
+          <td>string</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>location</td>
+          <td>object</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>drops</td>
+          <td>object</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>image</td>
+          <td>string(url)</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>fight</td>
+          <td>string</td>
+          <td></td>
+        </tr>
+      </table>
+
+    </section>
+
+<!-- All bosses section -->
+    <section>
+      <h2 id="getAllBosses">Get all bosses</h2>
+      <p>You can access the bosses list via the <span class="special__element">/bosses</span>  endpoint.</p>
+      <p class="getAllBossesP">GET: <span class="">https://bloodborne-simple-api-dev-sdqb.2.us-1.fl0.io/bosses</span></p>
+      
+
+    </section>
+    
+<!-- Single boss section -->
+    <section id="singleBoss">
+      <h2>Get a single boss</h2>
+      <p>You can get an individual character by appending the 
+        <span class="special__element">ID</span> as a parameter: 
+        <span class="special__element">/bosses/2</span></p>
+
+        <p>GET: <span>https://bloodborne-simple-api-dev-sdqb.2.us-1.fl0.io/bosses/1</span></p>
+    </section>
+
+<!--  -->
+    <section>
+
+
+    </section>
 
   </div>
 </div>

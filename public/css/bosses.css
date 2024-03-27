@@ -9,6 +9,11 @@ body{
   background-repeat: no-repeat;
 
 }
+html{
+  scroll-behavior: smooth;
+
+}
+
 @font-face {
   font-family: Bloodborne;
   src: url(../assets/flesh-and-blood-font/Fleshandblood-MVA5x.ttf);
@@ -16,6 +21,7 @@ body{
 }
 
 .mainHero{
+  position: fixed;
   width: 100%;
   min-width: 1200px;
   height: 5em;
@@ -41,53 +47,153 @@ body{
     margin-right: 2em;
     li{
       list-style: none;
-
-      a{
-        text-decoration: none;
-        color: White;
-      }
-      a:hover{
-        background: linear-gradient(to right, #0ca9b4, #8898cd);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
+    }
+    a{
+      text-decoration: none;
+      color: White;
+    }
+    a:hover{
+      background: linear-gradient(to right, #0ca9b4, #8898cd);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
   }
 }
+/* DOCUMENTATION CONTENT */
 .docCont{
 display: flex;
 flex-direction: row;
 }
+
+/* .endpoint{
+  font-family: bloodborne;
+  font-size: 30px;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  text-align: center;
+} */
+
 .ind{
-  width: 15%;
+  position: fixed;
+  top: 5em;
+  width: 12%;
   height: 100vh;
   padding: 1.5em;
   color: white;
   border-right: 1px solid grey;
-  a{
+  .title{
+    color: white;
+    text-decoration: none;
+    list-style: none;
+
+  }
+  .subtitle{
     list-style: none;
     text-decoration: none;
     color: white;
     padding-top: 2px;
     padding-left: 10px;
+    font-size: 20px;
   }
+
 }
 .content{
   color: white;
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
   height: 50vh;
-  padding: 5em;
-  h2{
-    font-family: 'bloodborne';
-    font-size: 30px;
-  }
+  padding-left: 20em;
+  padding-right: 10em;
   p{
     padding-top: 10px;
     font-size: 20px;
-    span{
-      border-bottom: 1px solid white;
-    }
+    font-family: "Barlow", sans-serif;
   }
+  .endPoint{
+    color: white;
+    text-decoration: underline cyan;
+    transition: 1s all;
+  }
+  h2{
+    font-family: 'bloodborne';
+    font-size: 30px;
+    padding-top: 3em;
+
+  }
+
+  a:hover{
+    color: cyan;
+    text-decoration: none;
+  }
+  .blooborne__api__span{
+    color: darkgray;
+  }
+  .special__element{
+    background-color: rgb(48, 48, 48);
+    border: 1px solid transparent;
+    padding: 3px;
+    border-radius: 5px;
+    text-align: center  ;
+  }
+  .doc__title{
+    font-size: 45px;
+    font-family: 'Bloodborne';
+  }
+  .intr__sect{
+    
+
+    .intr__title__mo{
+        padding-top: 2em;
+  
+        
+      }
+  }
+  
+  .rest__sect{
+    .rest__des{
+      padding-top: 2em;
+    }
+
+
+
+
+  
+
+
+  }
+
+  #bosses__schema{
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+  }
+  table tr{
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+    font-size: 20px;
+  }
+  table th, td {
+    text-align: left;
+    border-bottom: 1px solid hsla(0, 89%, 19%, 0.61);
+    font-feature-settings: "tnum";
+    -moz-font-feature-settings: "tnum";
+    -ms-font-feature-settings: "tnum";
+    -webkit-font-feature-settings: "tnum";
+    padding-left: 1.08333rem;
+    padding-top: 0.8125rem;
+    padding-bottom: calc(0.8125rem - 1px);
+    
+  }
+  th {
+      background-color:black;
+  }
+
+  }
+
+
+
 
 
   .bossesTitle{
@@ -105,55 +211,14 @@ flex-direction: row;
     font-family: 'Bloodborne';
     font-size: 25px;
 
-    .getAllBossesP{
-      color: red;
-      background-color: red;
-    }
+
   }
 }
 
 
 
 
-.endpoint{
-  font-family: bloodborne;
-  font-size: 30px;
-  color: white;
-  text-shadow: 1px 1px 1px black;
-  text-align: center;
-}
-.bossesSection{
-  width: 90%;
-  margin: 0 auto;
-  display: grid;
-  gap: 2em;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  justify-items: center;
-  align-items: center;
-  height: 100vh;
-  .container{
-    font-family: bloodborne;
-    color: white;
-      text-shadow: 1px 2px 3px red;
-      text-align: center;
-    .name{
-      font-size: 25px;
 
-    }
-
-
-    
-  }
-}
-h4{
-  font-size: 25px;
-  text-align: center;
-  color: white;
-  text-shadow: 2px 1px 2px red;
-}
-img{
-  width: 75%;
-}
 
 
 

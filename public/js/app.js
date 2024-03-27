@@ -2,7 +2,7 @@
 const apiSection =  document.querySelector('.apiSection')
 
 // const url = 'https://bloodborne-simple-api-dev-sdqb.2.us-1.fl0.io/bosses' ?? 'http://localhost:3000/bosses' 
-const url = 'http://localhost:3000/bosses' 
+const url = 'http://localhost:3000/api/bosses' 
 
 
 const getApi = async() =>{
