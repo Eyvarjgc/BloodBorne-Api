@@ -10,62 +10,86 @@
 <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
-  <nav class="mainHero">
-  <a href="index.html"><img class="mainHero__img" src="assets/mark.jpg" alt="IMAGE GO HERE"></a>
-  <ul>
-    <li> <a href="bosses.html">Docs</a> </li>
-    <li><a href="">About</a> </li>
-    <li><a href="">Support us</a> </li>
-  </ul>
-</nav>
+
+  <nav class="main-hero">
+      <a href="index.html"><img class="hero-img" src="assets/mark.jpg" alt="IMAGE GO HERE"></a>
+    <ul class="ul-hero">
+      <li><a href="bosses.html">Docs</a> </li>
+      <li><a href="">About</a> </li>
+      <li><a href="">Support us</a> </li>
+    </ul>
+  </nav>
   
-<div class="docCont">
+<div class="documentation-content">
 
-  <div class="ind">
-    <h2><a href="#intro" class="title">Introduction</a></h2>
-      <p><a href="#rest" class="subtitle">REST</a></p>
+  <div class="sidebar-nav">
+    <h2><a href="#intro" class="sidebar-title">Introduction</a></h2>
+      <p><a href="#rest" class="sidebar-subtitle">REST</a></p>
 
-    <h2><a href="#bosses" class="title">Bosses</a></h2>
-      <p><a href="#bosses__schema"class="subtitle">Bosses schema</a></p>
-      <p><a href="#getAllBosses" class="subtitle">Get all bosses</a></p>
-      <p><a href="#singleBoss" class="subtitle">Get a single boss</a></p>
+    <h2><a href="#bosses" class="sidebar-title">Bosses</a></h2>
+      <p><a href="#bosses__schema"class="sidebar-subtitle">Bosses schema</a></p>
+      <p><a href="#getAllBosses" class="sidebar-subtitle">Get all bosses</a></p>
+      <p><a href="#singleBoss" class="sidebar-subtitle">Get a single boss</a></p>
 
   </div>
 
-  <div class="content" >
-    <h1 class="doc__title" >Documentation</h1>
+  <div class="information-content" >
+    <h1 class="documentation-title">Documentation</h1>
 
 <!-- Introduction -->
-    <section class="intr__sect">
-    <h2 class="intr__title " id="intro">Introduction</h2>
-    <p>Welcome to the official documentation for <span class="blooborne__api__span">Bloodborne's API!</span>  Whether you're a developer, gamer, or enthusiast, this documentation provides comprehensive information on accessing and utilizing <span class="blooborne__api__span">Bloodborne's API</span>  to enhance your experience.
+    <section class="introduction-section" id="intro">
+
+    <h2 class="documentation-titles">Introduction</h2>
+
+    <p class="documentation-text">Welcome to the official documentation for 
+      <span class="bloodborne-api">Bloodborne's API!</span>  
+      Whether you're a developer, gamer, or enthusiast, this documentation provides comprehensive information on accessing and utilizing    <span class="bloodborne-api">Bloodborne's API</span>  
+      to enhance your experience.
 
     </p>
-    <p class="intr__title__mo">All interactions with the API are performed via <span class="special__element">GET </span> requests, ensuring simplicity and ease of use. </p>
+
+    <p class="documentation-text description-section">All interactions with the API are performed via 
+      <span class="element-s">GET </span> 
+      requests, ensuring simplicity and ease of use. </p>
+
     </section>
 
 <!-- Rest section -->
     <section class="rest__sect" id="rest">
-      <h2>REST</h2>
-      <p>Base url: <a href="https://bloodborne-simple-api-dev-sdqb.2.us-1.fl0.io/api" class="endPoint">https://bloodborne-simple-api-dev-sdqb.2.us-1.fl0.io/api</a></p>
-      <p class="rest__des">The base URL for <span class="blooborne__api__span">Bloodborne's API</span>  serves as the entry point for accessing all available resources.Expect all responses from the API to be formatted in <span class="special__element">JSON</span> , allowing for easy integration into your applications. </p>
+      <h2 class="documentation-titles">REST</h2>
+
+      <p class="documentation-text">Base url: <a href="https://bloodborne-simple-api-dev-sdqb.2.us-1.fl0.io/api" class="endPoint">https://bloodborne-simple-api-dev-sdqb.2.us-1.fl0.io/api</a></p>
+
+      <p class="documentation-text description-section">The base URL for 
+        <span class="bloodborne-api">Bloodborne's API</span>  
+        serves as the entry point for accessing all available resources.Expect all responses from the API to be formatted in 
+        <span class="element-s">JSON</span> 
+        allowing for easy integration into your applications.</p>
 
 
 
-      <div class="script-container">
-        <pre>
-          <code class="shell-script">
-          get
-          </code>
-        </pre>
-      </div>
+<div class="restQueryGet" data-language="shell">
+<pre class="language__shell">
+  <code>
+    <p><span class="GET">GET</span> <span class="">https://bloodborne-simple-api-dev-sdqb.2.us-1.fl0.io/api</span></p>
+  </code>
+</pre>
+<pre class="language-json">
+  <p>
+    {
+      <span class="json-property">"Bosses"</span> : <span class="json-string">"https://bloodborne-simple-api-dev-sdqb.2.us-1.fl0.io/api/bosses"</span> ,
+      <span class="json-property">"Charactes"</span> : <span  class="json-string">"https://bloodborne-simple-api-dev-sdqb.2.us-1.fl0.io/api/characters"</span> 
+    }
+  </p>
+</pre>
+</div>
 
     </section>
-    
-<!-- Bosses sectio -->
+
+<!-- Bosses section -->
     <section id="bosses">
-      <h2 class="bossesTitle">Bloodborne Bosses</h2>
-      <p>There are  <span class="special__element">4</span> bosses in total, ordered by ID.</p>
+      <h2 class="documentation-titles">Bloodborne Bosses</h2>
+      <p class="documentation-text">There are  <span class="element-s">4</span> bosses in total, ordered by ID.</p>
     </section>
 
 <!-- Bosses schema section  -->
@@ -131,35 +155,95 @@
     </section>
 
 <!-- All bosses section -->
-    <section>
-      <h2 id="getAllBosses">Get all bosses</h2>
-      <p>You can access the bosses list via the <span class="special__element">/bosses</span>  endpoint.</p>
-      <p class="getAllBossesP">GET: <span class="">https://bloodborne-simple-api-dev-sdqb.2.us-1.fl0.io/bosses</span></p>
+    <section id="getAllBosses">
+      <h2 class="documentation-titles">Get all bosses</h2>
+      <p class="documentation-text">You can access the bosses list via the <span class="element-s">/bosses</span>  endpoint.</p>
       
+
+      <div class="restQueryGet" data-language="shell">
+        <pre class="language__shell">
+          <code>
+            <p><span class="GET">GET</span> <span class="">https://bloodborne-simple-api-dev-sdqb.2.us-1.fl0.io/api/bosses</span></p>
+          </code>
+        </pre>
+    <pre class="language-json">
+    <p>
+    {
+    <span class="json-property">"success"</span> : <span class="json-string">true</span> ,
+    <span class="json-property">"result"</span> : [ 
+    { 
+    <span  class="json-property">"id"</span> : <span  class="json-string">"1"</span>,
+    <span  class="json-property">"name"</span> : <span  class="json-string">"Cleric Beast"</span>, 
+    <span  class="json-property">"information"</span> : <span  class="json-string">"The Cleric Beast is   an enormous creature with disfigured horns."</span>, 
+    <span  class="json-property">"location"</span> : <span  class="json-string">"Central Yharnam"</span>, 
+    <span  class="json-property">"drops"</span> : <span  class="json-string">{
+      "Blood Echoes",
+      "Sword Hunter Badge"
+      }</span>, 
+    <span  class="json-property">"image"</span> : <span  class="json-string">"https://i.pinimg.com/564x/6c/72/cf/6c72cfa0f636cba37062f7a1855caa12.jpg"</span>, 
+    <span  class="json-property">"fight"</span> : <span  class="json-string">"Optional"</span>,  
+    },
+    ]
+    }
+    </p>
+    </pre>
+        </div>
+
 
     </section>
     
 <!-- Single boss section -->
     <section id="singleBoss">
-      <h2>Get a single boss</h2>
-      <p>You can get an individual character by appending the 
+      <h2 class="documentation-titles">Get a single boss</h2>
+      <p class="documentation-text">You can get an individual character by appending the 
         <span class="special__element">ID</span> as a parameter: 
         <span class="special__element">/bosses/2</span></p>
 
-        <p>GET: <span>https://bloodborne-simple-api-dev-sdqb.2.us-1.fl0.io/bosses/1</span></p>
+        <div class="restQueryGet" data-language="shell">
+          <pre class="language__shell">
+            <code>
+              <p><span class="GET">GET</span> <span class="">https://bloodborne-simple-api-dev-sdqb.2.us-1.fl0.io/api/bosses/2</span></p>
+            </code>
+          </pre>
+    <pre class="language-json">
+    <p>
+    {
+    <span class="json-property">"success"</span> : <span class="json-string">true</span> ,
+    <span class="json-property">"result"</span> : [ 
+    { 
+    <span  class="json-property">"id"</span> : <span  class="json-string">"2"</span>,
+    <span  class="json-property">"name"</span> : <span  class="json-string">"Father Gascoigne"</span>, 
+    <span  class="json-property">"information"</span> : <span  class="json-string">""</span>, 
+    <span  class="json-property">"location"</span> : <span  class="json-string">"Central Yharnam"</span>, 
+    <span  class="json-property">"drops"</span> : <span  class="json-string">{
+      "Blood Echoes",
+      "Oedon Tomb Key"
+      }</span>, 
+    <span  class="json-property">"image"</span> : <span  class="json-string">"https://i.pinimg.com/564x/6d/a6/0b/6da60bedd5b74543bdab212128ffef34.jpg"</span>, 
+    <span  class="json-property">"fight"</span> : <span  class="json-string">"Neccesary"</span>,  
+    },
+    ]
+    }
+    </p>
+    </pre>
+          </div>
+        
     </section>
 
-<!--  -->
-    <section>
 
-
-    </section>
 
   </div>
+
+
+
+
+
+
+
+
+
 </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <script src="./js/bossses.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="./js/bossses.js"></script>
 </body>
 </html>

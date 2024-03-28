@@ -7,11 +7,9 @@ body{
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-
 }
 html{
   scroll-behavior: smooth;
-
 }
 
 @font-face {
@@ -20,7 +18,7 @@ html{
 
 }
 
-.mainHero{
+.main-hero{
   position: fixed;
   width: 100%;
   min-width: 1200px;
@@ -32,48 +30,48 @@ html{
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid white;
-  .mainHero__img{
+  
+  .hero-img{
     width: 50px;
     height: 50px;
     border-radius: 50px;
     margin-left: 2em;
   }
-  ul{
-    /* margin: 0 10em; */
+
+  .ul-hero{ 
     display: flex;
     gap: 1.5em;
     font-size: 25px;
     font-family: bloodborne;
     margin-right: 2em;
-    li{
-      list-style: none;
-    }
-    a{
-      text-decoration: none;
-      color: White;
-    }
-    a:hover{
-      background: linear-gradient(to right, #0ca9b4, #8898cd);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+    
+
+  }
+
+  .ul-hero li{
+    list-style: none;
+  }
+
+  a{
+    text-decoration: none;
+    color: White;
+  }
+
+  a:hover{
+    background: linear-gradient(to right, #0ca9b4, #8898cd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
-/* DOCUMENTATION CONTENT */
-.docCont{
+
+
+
+.documentation-content{
 display: flex;
 flex-direction: row;
 }
 
-/* .endpoint{
-  font-family: bloodborne;
-  font-size: 30px;
-  color: white;
-  text-shadow: 1px 1px 1px black;
-  text-align: center;
-} */
-
-.ind{
+.sidebar-nav{
   position: fixed;
   top: 5em;
   width: 12%;
@@ -81,13 +79,14 @@ flex-direction: row;
   padding: 1.5em;
   color: white;
   border-right: 1px solid grey;
-  .title{
+
+  .sidebar-title{
     color: white;
     text-decoration: none;
     list-style: none;
-
   }
-  .subtitle{
+
+  .sidebar-subtitle{
     list-style: none;
     text-decoration: none;
     color: white;
@@ -97,73 +96,31 @@ flex-direction: row;
   }
 
 }
-.content{
+
+.information-content{
   color: white;
   width: 80%;
   margin: 0 auto;
   height: 50vh;
-  padding-left: 20em;
+  padding-left: 23em;
   padding-right: 10em;
-  p{
-    padding-top: 10px;
-    font-size: 20px;
-    font-family: "Barlow", sans-serif;
-  }
-  .endPoint{
-    color: white;
-    text-decoration: underline cyan;
-    transition: 1s all;
-  }
-  h2{
-    font-family: 'bloodborne';
-    font-size: 30px;
-    padding-top: 3em;
+  padding-top: 10em;
 
-  }
-
-  a:hover{
-    color: cyan;
-    text-decoration: none;
-  }
-  .blooborne__api__span{
-    color: darkgray;
-  }
-  .special__element{
-    background-color: rgb(48, 48, 48);
-    border: 1px solid transparent;
-    padding: 3px;
-    border-radius: 5px;
-    text-align: center  ;
-  }
-  .doc__title{
+  .documentation-title{
     font-size: 45px;
     font-family: 'Bloodborne';
   }
-  .intr__sect{
-    
 
-    .intr__title__mo{
-        padding-top: 2em;
-  
-        
-      }
+  /* .introduction-section{
   }
-  
+
   .rest__sect{
-    .rest__des{
-      padding-top: 2em;
-    }
 
 
-
-
-  
-
-
-  }
+  } */
 
   #bosses__schema{
-
+    margin-top: 2em;
     table {
       width: 100%;
       border-collapse: collapse;
@@ -192,35 +149,72 @@ flex-direction: row;
 
   }
 
+}
 
+.documentation-titles{
+  font-family: 'bloodborne';
+  font-size: 30px;
+  padding-top: 3em;
 
+}
+.documentation-text{
+  padding-top: 1em;
+  font-size: 20px;
+  font-family: "Barlow", sans-serif;
+}
 
+.bloodborne-api{
+  color: darkgray;
+}
 
-  .bossesTitle{
-    /* background: linear-gradient(to right, #e90707, #d59200);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
-    padding-top: 5em;
+.element-s{
+  background-color: rgb(48, 48, 48);
+  border: 1px solid transparent;
+  padding: 3px;
+  border-radius: 5px;
+  text-align: center  ;
+}
+
+.description-section{
+  padding-top: 2em;
+}
+.endPoint{
+  color: white;
+  text-decoration: underline cyan;
+  transition: 1s all;
+}
+
+.restQueryGet .language__shell{
+  background-color: #251318;
+  color: black;
+  border-radius: 7px 7px 0px 0px;
+  text-align: left;
+  padding-left: 2em;
+  margin-top: 1em;
+  font-size: 17.3px;
+  height: 5.5em;
+  border-bottom: 1px solid white;
+  p{
     color: white;
-    font-size: 30px;
-    font-family: bloodborne;
   }
-
-  .getAllBosses{
-    padding-top: 5em;
-    font-family: 'Bloodborne';
-    font-size: 25px;
-
+  .GET{
+    color: #4cff8f;
+    font-weight: 600;
 
   }
 }
+.restQueryGet .language-json{
+  background-color: #251318;
+  border-radius: 0px 0px 7px 7px ;
+  font-size: 17.3px;
+  .json-property{
+    color: cyan;
+  }
 
-
-
-
-
-
-
+  .json-string{
+    color: rgb(218, 0, 0);
+  }
+}
 
 
 @media (min-width:950px){
