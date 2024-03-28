@@ -18,7 +18,7 @@ export class BossesController{
 
     res.status(200).send({
       success:true,
-      data:result
+      result:result
   })
   }
 
