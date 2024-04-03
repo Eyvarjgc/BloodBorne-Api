@@ -1,6 +1,6 @@
 const bossesSection =  document.querySelector('.bossesSection')
 
-const URL = 'https://bloodborne-simple-api-dev-sdqb.2.us-1.fl0.io/bosses' ?? 'http://localhost:3000/bosses'
+const URL = 'https://bloodborne-simple-api-dev-sdqb.2.us-1.fl0.io/bosses' ?? 'http://localhost:3000/api/bosses'
 const getApi = async() =>{
   try{
     const response = await axios.get(URL) 
@@ -27,3 +27,19 @@ const getApi = async() =>{
 }
 
 getApi()
+
+const botton = document.querySelector('.mobil-nav')
+const mainHeroMobil = document.querySelector('.sidebar-nav-mobil')
+const sidebarItem = document.querySelectorAll('.sidebar-item')
+
+botton.addEventListener('click', () => {
+  mainHeroMobil.classList.toggle('sidebar-nav-mobil-activate')
+
+  sidebarItem.forEach(element => {
+    element.addEventListener('click',() => {
+      mainHeroMobil.classList.remove('sidebar-nav-mobil-activate')
+  });
+
+
+  })
+})

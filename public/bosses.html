@@ -12,7 +12,8 @@
 <body>
 
   <nav class="main-hero">
-      <a href="index.html"><img class="hero-img" src="assets/mark.jpg" alt="IMAGE GO HERE"></a>
+      <a href="index.html"><img class="hero-img" src="assets/jm106g01.svg" alt=""></a>
+        
     <ul class="ul-hero">
       <li><a href="bosses.html">Docs</a> </li>
       <li><a href="">About</a> </li>
@@ -20,6 +21,8 @@
     </ul>
   </nav>
   
+
+
 <div class="documentation-content">
 
   <div class="sidebar-nav">
@@ -32,6 +35,16 @@
       <p><a href="#singleBoss" class="sidebar-subtitle">Get a single boss</a></p>
 
   </div>
+
+  <nav class="sidebar-nav-mobil ">
+    <h2><a href="#intro" class="sidebar-title sidebar-item">Introduction</a></h2>
+      <p><a href="#rest" class="sidebar-subtitle sidebar-item">REST</a></p>
+
+    <h2><a href="#bosses" class="sidebar-title sidebar-item">Bosses</a></h2>
+      <p><a href="#bosses__schema"class="sidebar-subtitle sidebar-item">Bosses schema</a></p>
+      <p><a href="#getAllBosses" class="sidebar-subtitle sidebar-item">Get all bosses</a></p>
+      <p><a href="#singleBoss" class="sidebar-subtitle sidebar-item">Get a single boss</a></p>
+  </nav>
 
   <div class="information-content" >
     <h1 class="documentation-title">Documentation</h1>
@@ -58,7 +71,10 @@
     <section class="rest__sect" id="rest">
       <h2 class="documentation-titles">REST</h2>
 
-      <p class="documentation-text">Base url: <a href="https://bloodborne-simple-api-dev-sdqb.2.us-1.fl0.io/api" class="endPoint">https://bloodborne-simple-api-dev-sdqb.2.us-1.fl0.io/api</a></p>
+      <p class="documentation-text">
+        <strong>Base url</strong>: 
+        <a href="https://bloodborne-simple-api-dev-sdqb.2.us-1.fl0.io/api" class="endPoint" target="_blank">https://bloodborne-simple-api-dev-sdqb.2.us-1.fl0.io/api</a>
+      </p>
 
       <p class="documentation-text description-section">The base URL for 
         <span class="bloodborne-api">Bloodborne's API</span>  
@@ -69,19 +85,15 @@
 
 
 <div class="restQueryGet" data-language="shell">
-<pre class="language__shell">
-  <code>
-    <p><span class="GET">GET</span> <span class="">https://bloodborne-simple-api-dev-sdqb.2.us-1.fl0.io/api</span></p>
-  </code>
-</pre>
-<pre class="language-json">
-  <p>
-    {
-      <span class="json-property">"Bosses"</span> : <span class="json-string">"https://bloodborne-simple-api-dev-sdqb.2.us-1.fl0.io/api/bosses"</span> ,
-      <span class="json-property">"Charactes"</span> : <span  class="json-string">"https://bloodborne-simple-api-dev-sdqb.2.us-1.fl0.io/api/characters"</span> 
-    }
-  </p>
-</pre>
+
+
+<iframe class="json-api-example" 
+  src="https://carbon.now.sh/embed?bg=rgba%280%2C0%2C0%2C1%29&t=synthwave-84&wt=none&l=application%2Fjson&width=680&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%2509%2509%2509GET%2520https%253A%252F%252Fbloodborne-simple-api-dev-sdqb.2.us-1.fl0.io%252Fapi%250A%2520%250A%257B%250A%2520%2520%2520%2520%2520%2520%2522Bosses%2522%2520%253A%2520%2522https%253A%252F%252Fbloodborne-simple-api-dev-sdqb.2.us-1.fl0.io%252Fapi%252Fbosses%2522%2520%252C%250A%2520%2520%2520%2520%2520%2520%2522Charactes%2522%2520%253A%2520%2522https%253A%252F%252Fbloodborne-simple-api-dev-sdqb.2.us-1.fl0.io%252Fapi%252Fcharacters%2522%2520%250A%2520%257D%250A"
+  sandbox="allow-scripts allow-same-origin">
+</iframe>
+
+<img class="json-api-example-mobil" src="assets/snippetsAPi/json-api-example.png" alt="">
+
 </div>
 
     </section>
@@ -94,7 +106,7 @@
 
 <!-- Bosses schema section  -->
     <section id="bosses__schema">
-      <h2>Bosses schema</h2>
+      <h2  class="documentation-titles">Bosses schema</h2>
 
       <table>
         <thead>
@@ -161,12 +173,13 @@
       
 
       <div class="restQueryGet" data-language="shell">
-        <pre class="language__shell">
+        <!-- <pre class="language__shell">
           <code>
             <p><span class="GET">GET</span> <span class="">https://bloodborne-simple-api-dev-sdqb.2.us-1.fl0.io/api/bosses</span></p>
           </code>
-        </pre>
-    <pre class="language-json">
+        </pre> -->
+
+    <!-- <pre class="language-json">
     <p>
     {
     <span class="json-property">"success"</span> : <span class="json-string">true</span> ,
@@ -186,7 +199,14 @@
     ]
     }
     </p>
-    </pre>
+    </pre> -->
+
+    <iframe class="json-example"
+    src="https://carbon.now.sh/embed?bg=rgba%280%2C0%2C0%2C1%29&t=synthwave-84&wt=none&l=application%2Fjson&width=680&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%2509%2509%2509GET%2520https%253A%252F%252Fbloodborne-simple-api-dev-sdqb.2.us-1.fl0.io%252Fapi%252Fbosses%250A%250A%250A%250A%257B%250A%2520%2520%2520%2520%2522success%2522%253A%2520true%252C%250A%2520%2520%2520%2520%2522result%2522%253A%2520%255B%250A%2520%2520%2520%2520%2520%2520%2520%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522id%2522%253A%2520%25221%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522name%2522%253A%2520%2522Cleric%2520Beast%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522information%2522%253A%2520%2522The%2520Cleric%2520Beast%2520is%2520an%2520enormous%2520creature%2520with%2520disfigured%2520horns.%2520%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520With%2520high%2520agility%2520and%2520superhuman%2520strength%252C%2520this%2520boss%2520should%2520not%2520be%2520taken%2520lightly.%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522location%2522%253A%2520%2522Central%2520Yharnam%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522drops%2522%253A%2520%255B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522Blood%2520Echoes%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522Sword%2520Hunter%2520Badge%2522%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%255D%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522image%2522%253A%2520%2522https%253A%252F%252Fi.pinimg.com%252F564x%252F6c%252F72%252Fcf%252F6c72cfa0f636cba37062f7a1855caa12.jpg%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522fight%2522%253A%2520%2522Optional%2522%250A%2520%2520%2520%2520%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520%255D%250A%257D"
+    sandbox="allow-scripts allow-same-origin">
+  </iframe>
+
+  <img class="json-example-mobil" src="assets/snippetsAPi/json-example-1.png" alt="">
         </div>
 
 
@@ -196,16 +216,16 @@
     <section id="singleBoss">
       <h2 class="documentation-titles">Get a single boss</h2>
       <p class="documentation-text">You can get an individual character by appending the 
-        <span class="special__element">ID</span> as a parameter: 
-        <span class="special__element">/bosses/2</span></p>
+        <span class="element-s">ID</span> as a parameter: 
+        <span class="element-s">/bosses/2</span></p>
 
         <div class="restQueryGet" data-language="shell">
-          <pre class="language__shell">
+          <!-- <pre class="language__shell">
             <code>
               <p><span class="GET">GET</span> <span class="">https://bloodborne-simple-api-dev-sdqb.2.us-1.fl0.io/api/bosses/2</span></p>
             </code>
-          </pre>
-    <pre class="language-json">
+          </pre> -->
+    <!-- <pre class="language-json">
     <p>
     {
     <span class="json-property">"success"</span> : <span class="json-string">true</span> ,
@@ -225,7 +245,14 @@
     ]
     }
     </p>
-    </pre>
+    </pre> -->
+
+    <iframe class="json-example" 
+  src="https://carbon.now.sh/embed?bg=rgba%280%2C0%2C0%2C1%29&t=synthwave-84&wt=none&l=application%2Fjson&width=680&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%2509%2509%2509GET%2520https%253A%252F%252Fbloodborne-simple-api-dev-sdqb.2.us-1.fl0.io%252Fapi%252Fbosses%252F2%250A%250A%2520%2520%2520%250A%257B%250A%2520%2520%2520%2520%2520%2520%2522success%2522%2520%253A%2520true%2520%252C%250A%2520%2520%2520%2520%2520%2520%2522result%2522%2520%253A%2520%255B%2520%250A%2520%2520%2520%2520%2520%2520%2520%2520%257B%2520%250A%2520%2520%2520%2520%2520%2520%2520%2520%2522id%2522%2520%253A%2520%25222%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2522name%2522%2520%253A%2520%2522Father%2520Gascoigne%2522%252C%2520%250A%2520%2520%2520%2520%2520%2520%2520%2520%2522information%2522%2520%253A%2520%2522%2522%252C%2520%250A%2520%2520%2520%2520%2520%2520%2520%2520%2522location%2522%2520%253A%2520%2522Central%2520Yharnam%2522%252C%2520%250A%2520%2520%2520%2520%2520%2520%2520%2520%2522drops%2522%2520%253A%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522Blood%2520Echoes%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522Oedon%2520Tomb%2520Key%2522%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%257D%252C%2520%250A%2520%2520%2520%2520%2520%2520%2520%2520%2522image%2522%2520%253A%2520%2522https%253A%252F%252Fi.pinimg.com%252F564x%252F6d%252Fa6%252F0b%252F6da60bedd5b74543bdab212128ffef34.jpg%2522%252C%2520%250A%2520%2520%2520%2520%2520%2520%2520%2520%2522fight%2522%2520%253A%2520%2522Neccesary%2522%252C%2520%2520%250A%2520%2520%2520%2520%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520%2520%2520%255D%250A%2520%2520%2520%2520%257D"
+  sandbox="allow-scripts allow-same-origin">
+</iframe>
+
+<img class="json-example-mobil" src="assets/snippetsAPi/json-api-2.png" alt="">
           </div>
         
     </section>
@@ -235,8 +262,7 @@
   </div>
 
 
-
-
+<img class="mobil-nav" src="assets/Bloodbore+.svg" alt="S">
 
 
 

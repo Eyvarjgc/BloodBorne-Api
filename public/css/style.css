@@ -17,46 +17,48 @@ body{
 .shortcut{
   border-radius: 50px;
 }
-.mainHero{
-  
-  width: 100%;
-  height: 3em;
-  max-width: 1200px;
-  margin: 0 auto;
-  background-color: black;
+.main-hero{
   display: flex;
   flex-direction: row;
+  width: 100%;
+  height: 5em;
+  background-color: black;
+  border-bottom: 1px solid white;
   align-items: center;
   
-  .mainHero__img{
-    width: 25px;
-    height: 25px;
+  .hero-img{
+    width: 30px;
+    height: 30px;
     border-radius: 50px;
-    margin-left: 2em;
+    margin-left: 1em;
   }
-  ul{
+
+  .ul-hero{ 
+    margin-left: 2em;
     display: flex;
-    gap: 1.5em;
-    font-size: 15px;
+    gap: 1em;
+    font-size: 18px;
     font-family: bloodborne;
-    margin-left: 3em;
+    margin-right: 2em;
+    
 
-    li{
-      list-style: none;
+  }
 
-      a{
-        text-decoration: none;
-        color: White;
-      }
-      a:hover{
-        background: linear-gradient(to right, #0ca9b4, #8898cd);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-    }
+  .ul-hero li{
+    list-style: none;
+  }
+
+  a{
+    text-decoration: none;
+    color: White;
+  }
+
+  a:hover{
+    background: linear-gradient(to right, #0ca9b4, #8898cd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
-
 .titleSection{
   height: 50vh;
 
@@ -137,7 +139,8 @@ body{
   }
 }
 @media (min-width:800px){
-  .mainHero{
+  .main-hero{
+    position: fixed;
     width: 100%;
     min-width: 1200px;
     height: 5em;
@@ -147,33 +150,41 @@ body{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid white;
     
-    .mainHero__img{
+    .hero-img{
       width: 50px;
       height: 50px;
       border-radius: 50px;
-      margin-left: 2em;
+      margin-left: 3em;
     }
-    ul{
-      /* margin: 0 10em; */
+  
+    .ul-hero{ 
       display: flex;
       gap: 1.5em;
       font-size: 25px;
       font-family: bloodborne;
       margin-right: 2em;
-      li{
-        list-style: none;
+      
   
-        a{
-          text-decoration: none;
-          color: White;
-        }
-        a:hover{
-          background: linear-gradient(to right, #0ca9b4, #8898cd);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-        }
-      }
+    }
+  
+    .ul-hero li{
+      list-style: none;
+    }
+  
+    a{
+      text-decoration: none;
+      color: White;
+      font-size: 20px;
+
+    }
+    
+  
+    a:hover{
+      background: linear-gradient(to right, #0ca9b4, #8898cd);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
   }
   
@@ -191,7 +202,7 @@ body{
     font-size: 100px;
     text-align: center;
     font-family: bloodborne;
-    padding-top: 1em;
+    padding-top: 2em;
   }
   
   

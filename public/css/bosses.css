@@ -9,7 +9,7 @@ body{
   background-repeat: no-repeat;
 }
 html{
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
 }
 
 @font-face {
@@ -19,32 +19,29 @@ html{
 }
 
 .main-hero{
-  position: fixed;
-  width: 100%;
-  min-width: 1200px;
-  height: 5em;
-  margin: 0 auto;
-  background-color: black;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  width: 100%;
+  height: 5em;
+  background-color: black;
   border-bottom: 1px solid white;
-  
+  align-items: center;
+  position: fixed;
+  z-index: 999;
   .hero-img{
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     border-radius: 50px;
-    margin-left: 2em;
+    margin-left: 1em;
   }
 
   .ul-hero{ 
+    margin-left: 2em;
     display: flex;
-    gap: 1.5em;
-    font-size: 25px;
+    gap: 1em;
+    font-size: 18px;
     font-family: bloodborne;
     margin-right: 2em;
-    
 
   }
 
@@ -70,15 +67,23 @@ html{
 display: flex;
 flex-direction: row;
 }
-
 .sidebar-nav{
+  display: none;
+}
+.sidebar-nav-mobil{
+  display: none;
   position: fixed;
-  top: 5em;
-  width: 12%;
+  width: 100%;
   height: 100vh;
   padding: 1.5em;
   color: white;
+  background-color: black;
   border-right: 1px solid grey;
+  overflow: auto;
+  z-index: 900;
+  padding-top: 6em;
+  transition: all 2s ease;
+
 
   .sidebar-title{
     color: white;
@@ -96,28 +101,25 @@ flex-direction: row;
   }
 
 }
+.sidebar-nav-mobil-activate{
+  display: block;
+  transition: all 2s ease;
+}
+
 
 .information-content{
   color: white;
-  width: 80%;
-  margin: 0 auto;
+  width: 85%;
   height: 50vh;
-  padding-left: 23em;
-  padding-right: 10em;
-  padding-top: 10em;
+  padding-left: 1.5em;
+  padding-top: 6.5em;
 
   .documentation-title{
-    font-size: 45px;
+    font-size: 2rem;
     font-family: 'Bloodborne';
   }
 
-  /* .introduction-section{
-  }
 
-  .rest__sect{
-
-
-  } */
 
   #bosses__schema{
     margin-top: 2em;
@@ -151,16 +153,25 @@ flex-direction: row;
 
 }
 
+.mobil-nav{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+}
+
+
 .documentation-titles{
   font-family: 'bloodborne';
-  font-size: 30px;
-  padding-top: 3em;
+  font-size: 1.51572rem;
+  padding-top: 4em;
 
 }
 .documentation-text{
   padding-top: 1em;
-  font-size: 20px;
+  font-size: 17px;
   font-family: "Barlow", sans-serif;
+  padding-right: 1em;
 }
 
 .bloodborne-api{
@@ -170,7 +181,7 @@ flex-direction: row;
 .element-s{
   background-color: rgb(48, 48, 48);
   border: 1px solid transparent;
-  padding: 3px;
+  padding: 2px;
   border-radius: 5px;
   text-align: center  ;
 }
@@ -184,39 +195,213 @@ flex-direction: row;
   transition: 1s all;
 }
 
-.restQueryGet .language__shell{
-  background-color: #251318;
-  color: black;
-  border-radius: 7px 7px 0px 0px;
-  text-align: left;
-  padding-left: 2em;
-  margin-top: 1em;
-  font-size: 17.3px;
-  height: 5.5em;
-  border-bottom: 1px solid white;
-  p{
+.json-example{
+display: none;
+}
+.json-api-example{
+  display: none;
+}
+.json-api-example-mobil{
+  display: block;
+  width: 400px;
+}
+.json-example-mobil{
+  display: block;
+  width: 400px;
+
+}
+@media (min-width:700px){
+  .main-hero{
+    position: fixed;
+    width: 100%;
+    min-width: 1200px;
+    height: 5em;
+    margin: 0 auto;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid white;
+    
+    .hero-img{
+      width: 50px;
+      height: 50px;
+      border-radius: 50px;
+      margin-left: 3em;
+    }
+  
+    .ul-hero{ 
+      display: flex;
+      gap: 1.5em;
+      font-size: 25px;
+      font-family: bloodborne;
+      margin-right: 2em;
+      
+  
+    }
+  
+    .ul-hero li{
+      list-style: none;
+    }
+  
+    a{
+      text-decoration: none;
+      color: White;
+      font-size: 20px;
+
+    }
+    
+  
+    a:hover{
+      background: linear-gradient(to right, #0ca9b4, #8898cd);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  
+  
+  .documentation-content{
+  display: flex;
+  flex-direction: row;
+  }
+  
+  .sidebar-nav-mobil{
+    display: none;
+  }
+
+  .sidebar-nav{
+    display: block;
+    position: fixed;
+    top: 5em;
+    width: 12%;
+    height: 100vh;
+    padding: 1.5em;
     color: white;
+    border-right: 1px solid grey;
+  
+    .sidebar-title{
+      color: white;
+      text-decoration: none;
+      list-style: none;
+    }
+  
+    .sidebar-subtitle{
+      list-style: none;
+      text-decoration: none;
+      color: white;
+      padding-top: 2px;
+      padding-left: 10px;
+      font-size: 20px;
+    }
+  
   }
-  .GET{
-    color: #4cff8f;
-    font-weight: 600;
-
+  .mobil-nav{
+    display: none;
   }
-}
-.restQueryGet .language-json{
-  background-color: #251318;
-  border-radius: 0px 0px 7px 7px ;
-  font-size: 17.3px;
-  .json-property{
-    color: cyan;
+  .information-content{
+    color: white;
+    width: 80%;
+    margin: 0 auto;
+    height: 50vh;
+    padding-left: 23em;
+    padding-right: 10em;
+    padding-top: 10em;
+  
+    .documentation-title{
+      font-size: 45px;
+      font-family: 'Bloodborne';
+    }
+  
+
+  
+    #bosses__schema{
+      margin-top: 2em;
+      table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    table tr{
+      display: table-row;
+      vertical-align: inherit;
+      border-color: inherit;
+      font-size: 20px;
+    }
+    table th, td {
+      text-align: left;
+      border-bottom: 1px solid hsla(0, 89%, 19%, 0.61);
+      font-feature-settings: "tnum";
+      -moz-font-feature-settings: "tnum";
+      -ms-font-feature-settings: "tnum";
+      -webkit-font-feature-settings: "tnum";
+      padding-left: 1.08333rem;
+      padding-top: 0.8125rem;
+      padding-bottom: calc(0.8125rem - 1px);
+      
+    }
+    th {
+        background-color:black;
+    }
+  
+    }
+  
   }
-
-  .json-string{
-    color: rgb(218, 0, 0);
+  
+  
+  
+  
+  .documentation-titles{
+    font-family: 'bloodborne';
+    font-size: 30px;
+    padding-top: 3em;
+  
   }
-}
+  .documentation-text{
+    padding-top: 1em;
+    font-size: 20px;
+    font-family: "Barlow", sans-serif;
+  }
+  
+  .bloodborne-api{
+    color: darkgray;
+  }
+  
+  .element-s{
+    background-color: rgb(48, 48, 48);
+    border: 1px solid transparent;
+    padding: 3px;
+    border-radius: 5px;
+    text-align: center  ;
+  }
+  
+  .description-section{
+    padding-top: 2em;
+  }
+  .endPoint{
+    color: white;
+    text-decoration: underline cyan;
+    transition: 1s all;
+  }
+  
 
 
-@media (min-width:950px){
- 
-}
+  .json-example{
+    display: block;
+    width: 940px;
+    height: 580px;
+      border:0;
+        overflow:hidden;
+  }
+  .json-api-example{
+    display: block;
+    width: 900px; height: 302px; border:0;  overflow:hidden;
+  }
+  .json-api-example-mobil{
+    display: none;
+  }
+  .json-example-mobil{
+    display: none;
+  }
+  
+}   
